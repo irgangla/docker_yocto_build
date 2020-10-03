@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 WORKDIR /yocto
 
@@ -18,6 +18,14 @@ RUN aptitude -y install cpio python2.7 gawk wget git-core diffstat unzip texinfo
 RUN ln -s /usr/bin/python2.7 /usr/bin/python2
 RUN ln -s /usr/bin/python2.7 /usr/bin/python
 
+RUN aptitude -y install locales
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+
 RUN useradd -ms /bin/bash yb
+
 USER yb
 
