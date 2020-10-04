@@ -98,4 +98,8 @@ build/*
 poky/*
 meta-*
 home/*
+downloads/*
+sstate-cache/*
+build_*
+
 
