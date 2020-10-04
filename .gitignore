@@ -97,3 +97,5 @@ poky
 build/*
 poky/*
 meta-*
+home/*
+
